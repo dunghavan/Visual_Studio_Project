@@ -1,0 +1,9 @@
+c:\users\dung\documents\visual studio 2015\Projects\HienThi_BaoCao_AnUong\HienThi_BaoCao_AnUong\bin\Debug\HienThi_BaoCao_AnUong.exe.config
+c:\users\dung\documents\visual studio 2015\Projects\HienThi_BaoCao_AnUong\HienThi_BaoCao_AnUong\bin\Debug\HienThi_BaoCao_AnUong.exe
+c:\users\dung\documents\visual studio 2015\Projects\HienThi_BaoCao_AnUong\HienThi_BaoCao_AnUong\bin\Debug\HienThi_BaoCao_AnUong.pdb
+c:\users\dung\documents\visual studio 2015\Projects\HienThi_BaoCao_AnUong\HienThi_BaoCao_AnUong\obj\Debug\HienThi_BaoCao_AnUong.csprojResolveAssemblyReference.cache
+c:\users\dung\documents\visual studio 2015\Projects\HienThi_BaoCao_AnUong\HienThi_BaoCao_AnUong\obj\Debug\HienThi_BaoCao_AnUong.Form1.resources
+c:\users\dung\documents\visual studio 2015\Projects\HienThi_BaoCao_AnUong\HienThi_BaoCao_AnUong\obj\Debug\HienThi_BaoCao_AnUong.Properties.Resources.resources
+c:\users\dung\documents\visual studio 2015\Projects\HienThi_BaoCao_AnUong\HienThi_BaoCao_AnUong\obj\Debug\HienThi_BaoCao_AnUong.csproj.GenerateResource.Cache
+c:\users\dung\documents\visual studio 2015\Projects\HienThi_BaoCao_AnUong\HienThi_BaoCao_AnUong\obj\Debug\HienThi_BaoCao_AnUong.exe
+c:\users\dung\documents\visual studio 2015\Projects\HienThi_BaoCao_AnUong\HienThi_BaoCao_AnUong\obj\Debug\HienThi_BaoCao_AnUong.pdb
