@@ -7,3 +7,4 @@ c:\users\dung\documents\visual studio 2015\Projects\HienThi_BaoCao_AnUong\HienTh
 c:\users\dung\documents\visual studio 2015\Projects\HienThi_BaoCao_AnUong\HienThi_BaoCao_AnUong\obj\Debug\HienThi_BaoCao_AnUong.csproj.GenerateResource.Cache
 c:\users\dung\documents\visual studio 2015\Projects\HienThi_BaoCao_AnUong\HienThi_BaoCao_AnUong\obj\Debug\HienThi_BaoCao_AnUong.exe
 c:\users\dung\documents\visual studio 2015\Projects\HienThi_BaoCao_AnUong\HienThi_BaoCao_AnUong\obj\Debug\HienThi_BaoCao_AnUong.pdb
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\HienThi_BaoCao_AnUong\HienThi_BaoCao_AnUong\obj\Debug\HienThi_BaoCao_AnUong.Form2.resources
