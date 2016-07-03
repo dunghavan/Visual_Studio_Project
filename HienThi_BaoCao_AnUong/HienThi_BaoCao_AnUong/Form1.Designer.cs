@@ -64,6 +64,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button_Sua = new System.Windows.Forms.Button();
             this.button_Xoa = new System.Windows.Forms.Button();
+            this.button_Thoat = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -447,7 +448,7 @@
             // button_Sua
             // 
             this.button_Sua.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Sua.Location = new System.Drawing.Point(742, 517);
+            this.button_Sua.Location = new System.Drawing.Point(732, 517);
             this.button_Sua.Margin = new System.Windows.Forms.Padding(4);
             this.button_Sua.Name = "button_Sua";
             this.button_Sua.Size = new System.Drawing.Size(124, 38);
@@ -459,7 +460,7 @@
             // button_Xoa
             // 
             this.button_Xoa.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Xoa.Location = new System.Drawing.Point(885, 517);
+            this.button_Xoa.Location = new System.Drawing.Point(875, 517);
             this.button_Xoa.Margin = new System.Windows.Forms.Padding(4);
             this.button_Xoa.Name = "button_Xoa";
             this.button_Xoa.Size = new System.Drawing.Size(124, 38);
@@ -467,11 +468,24 @@
             this.button_Xoa.Text = "Xóa";
             this.button_Xoa.UseVisualStyleBackColor = true;
             // 
+            // button_Thoat
+            // 
+            this.button_Thoat.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Thoat.Location = new System.Drawing.Point(1021, 517);
+            this.button_Thoat.Margin = new System.Windows.Forms.Padding(4);
+            this.button_Thoat.Name = "button_Thoat";
+            this.button_Thoat.Size = new System.Drawing.Size(124, 38);
+            this.button_Thoat.TabIndex = 36;
+            this.button_Thoat.Text = "Thoát";
+            this.button_Thoat.UseVisualStyleBackColor = true;
+            this.button_Thoat.Click += new System.EventHandler(this.button_Thoat_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1149, 561);
+            this.Controls.Add(this.button_Thoat);
             this.Controls.Add(this.button_Xoa);
             this.Controls.Add(this.button_Sua);
             this.Controls.Add(this.groupBox4);
@@ -538,6 +552,7 @@
         private System.Windows.Forms.Button button_Xoa;
         internal System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox_HoTen;
+        private System.Windows.Forms.Button button_Thoat;
     }
 }
 

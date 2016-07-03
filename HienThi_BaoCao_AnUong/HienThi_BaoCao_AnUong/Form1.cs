@@ -26,6 +26,11 @@ namespace HienThi_BaoCao_AnUong
         SqlParameter _ma_BC, _ten_BC, _ma_Tre, _ten_Tre, _ngay, _tinh_Trang_An, _tinh_Trang_Ngu, _tinh_Trang_VuiChoi,
                     _ma_NV, _ngay_Tao, _sort_by;
 
+        private void button_Thoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         public string maBC, tenBC, maTre, tenTre, ngay, ttAn, ttNgu, ttVuiChoi, maNV, ngayTao, ghiChu;
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -64,7 +69,6 @@ namespace HienThi_BaoCao_AnUong
             {
                 Form2 f = new Form2(this);
                 f.ShowDialog(this);
-                //this.Enabled = false;
             }
             catch(Exception ex)
             {
@@ -95,7 +99,7 @@ namespace HienThi_BaoCao_AnUong
                         _tinh_Trang_VuiChoi = sqlcmd.Parameters.Add("@p_TINHTRANG_VUICHOI", SqlDbType.NVarChar, 10);
                         _ma_NV = sqlcmd.Parameters.Add("@p_MA_NV", SqlDbType.NVarChar, 10);
                         _ngay_Tao = sqlcmd.Parameters.Add("@p_NGAY_TAO", SqlDbType.NVarChar, 30);
-                        // Transmitted vaue to Parameter:
+                        // Transmitted value to Parameter:
                         _ma_BC.Value = textBox_MaBC.Text;
                         _ten_BC.Value = textBox_TenBC.Text;
                         _ma_Tre.Value = textBox_MaTre.Text;

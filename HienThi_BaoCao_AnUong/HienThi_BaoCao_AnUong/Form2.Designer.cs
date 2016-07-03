@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.comboBox_MaNV = new System.Windows.Forms.ComboBox();
             this.dateTimePicker_NgayTao = new System.Windows.Forms.DateTimePicker();
             this.label_NgayTao = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label_Ma_NV = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox_GhiChu = new System.Windows.Forms.TextBox();
+            this.label_GhiChu = new System.Windows.Forms.Label();
             this.textBox_TT_VuiChoi = new System.Windows.Forms.TextBox();
             this.label_TinhTrangAn = new System.Windows.Forms.Label();
             this.label_TinhTrangNgu = new System.Windows.Forms.Label();
@@ -52,10 +54,9 @@
             this.label_BaoCaoNgay = new System.Windows.Forms.Label();
             this.textBox_MaBC = new System.Windows.Forms.TextBox();
             this.textBox_TenBC = new System.Windows.Forms.TextBox();
-            this.label_dd_MM_yyyy_1 = new System.Windows.Forms.Label();
-            this.label_GhiChu = new System.Windows.Forms.Label();
-            this.textBox_GhiChu = new System.Windows.Forms.TextBox();
-            this.comboBox_MaNV = new System.Windows.Forms.ComboBox();
+            this.button_Luu = new System.Windows.Forms.Button();
+            this.button_Huy = new System.Windows.Forms.Button();
+            this.label_ThongBao = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -68,20 +69,29 @@
             this.groupBox4.Controls.Add(this.comboBox_MaNV);
             this.groupBox4.Controls.Add(this.dateTimePicker_NgayTao);
             this.groupBox4.Controls.Add(this.label_NgayTao);
-            this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Controls.Add(this.label_Ma_NV);
-            this.groupBox4.Location = new System.Drawing.Point(330, 178);
+            this.groupBox4.Location = new System.Drawing.Point(307, 178);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(252, 110);
             this.groupBox4.TabIndex = 37;
             this.groupBox4.TabStop = false;
             // 
+            // comboBox_MaNV
+            // 
+            this.comboBox_MaNV.FormattingEnabled = true;
+            this.comboBox_MaNV.Location = new System.Drawing.Point(92, 74);
+            this.comboBox_MaNV.Name = "comboBox_MaNV";
+            this.comboBox_MaNV.Size = new System.Drawing.Size(141, 21);
+            this.comboBox_MaNV.TabIndex = 17;
+            // 
             // dateTimePicker_NgayTao
             // 
+            this.dateTimePicker_NgayTao.Enabled = false;
+            this.dateTimePicker_NgayTao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_NgayTao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker_NgayTao.Location = new System.Drawing.Point(93, 27);
             this.dateTimePicker_NgayTao.Name = "dateTimePicker_NgayTao";
-            this.dateTimePicker_NgayTao.Size = new System.Drawing.Size(140, 20);
+            this.dateTimePicker_NgayTao.Size = new System.Drawing.Size(140, 21);
             this.dateTimePicker_NgayTao.TabIndex = 39;
             // 
             // label_NgayTao
@@ -94,18 +104,6 @@
             this.label_NgayTao.Size = new System.Drawing.Size(63, 15);
             this.label_NgayTao.TabIndex = 7;
             this.label_NgayTao.Text = "Ngày Tạo:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(148, 50);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 15);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "(dd-MM-yyyy)";
             // 
             // label_Ma_NV
             // 
@@ -130,12 +128,31 @@
             this.groupBox3.Controls.Add(this.textBox_TT_An);
             this.groupBox3.Controls.Add(this.textBox_TT_Ngu);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(330, 2);
+            this.groupBox3.Location = new System.Drawing.Point(307, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(491, 182);
+            this.groupBox3.Size = new System.Drawing.Size(513, 182);
             this.groupBox3.TabIndex = 36;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tình Trạng Trẻ";
+            // 
+            // textBox_GhiChu
+            // 
+            this.textBox_GhiChu.Location = new System.Drawing.Point(128, 132);
+            this.textBox_GhiChu.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox_GhiChu.Name = "textBox_GhiChu";
+            this.textBox_GhiChu.Size = new System.Drawing.Size(348, 22);
+            this.textBox_GhiChu.TabIndex = 19;
+            // 
+            // label_GhiChu
+            // 
+            this.label_GhiChu.AutoSize = true;
+            this.label_GhiChu.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_GhiChu.Location = new System.Drawing.Point(4, 136);
+            this.label_GhiChu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_GhiChu.Name = "label_GhiChu";
+            this.label_GhiChu.Size = new System.Drawing.Size(53, 15);
+            this.label_GhiChu.TabIndex = 18;
+            this.label_GhiChu.Text = "Ghi Chú:";
             // 
             // textBox_TT_VuiChoi
             // 
@@ -241,6 +258,7 @@
             // 
             // textBox_HoTen
             // 
+            this.textBox_HoTen.Enabled = false;
             this.textBox_HoTen.Location = new System.Drawing.Point(85, 77);
             this.textBox_HoTen.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_HoTen.Name = "textBox_HoTen";
@@ -256,7 +274,6 @@
             this.groupBox1.Controls.Add(this.label_BaoCaoNgay);
             this.groupBox1.Controls.Add(this.textBox_MaBC);
             this.groupBox1.Controls.Add(this.textBox_TenBC);
-            this.groupBox1.Controls.Add(this.label_dd_MM_yyyy_1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(-1, 1);
@@ -272,6 +289,8 @@
             // 
             this.dateTimePicker_Ngay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker_Ngay.Location = new System.Drawing.Point(97, 108);
+            this.dateTimePicker_Ngay.MaxDate = new System.DateTime(2016, 12, 25, 23, 59, 59, 0);
+            this.dateTimePicker_Ngay.MinDate = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker_Ngay.Name = "dateTimePicker_Ngay";
             this.dateTimePicker_Ngay.Size = new System.Drawing.Size(140, 22);
             this.dateTimePicker_Ngay.TabIndex = 38;
@@ -311,6 +330,7 @@
             // 
             // textBox_MaBC
             // 
+            this.textBox_MaBC.Enabled = false;
             this.textBox_MaBC.Location = new System.Drawing.Point(97, 32);
             this.textBox_MaBC.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_MaBC.Name = "textBox_MaBC";
@@ -325,50 +345,45 @@
             this.textBox_TenBC.Size = new System.Drawing.Size(140, 22);
             this.textBox_TenBC.TabIndex = 12;
             // 
-            // label_dd_MM_yyyy_1
+            // button_Luu
             // 
-            this.label_dd_MM_yyyy_1.AutoSize = true;
-            this.label_dd_MM_yyyy_1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_dd_MM_yyyy_1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label_dd_MM_yyyy_1.Location = new System.Drawing.Point(103, 137);
-            this.label_dd_MM_yyyy_1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_dd_MM_yyyy_1.Name = "label_dd_MM_yyyy_1";
-            this.label_dd_MM_yyyy_1.Size = new System.Drawing.Size(85, 15);
-            this.label_dd_MM_yyyy_1.TabIndex = 25;
-            this.label_dd_MM_yyyy_1.Text = "(dd-MM-yyyy)";
+            this.button_Luu.Location = new System.Drawing.Point(591, 240);
+            this.button_Luu.Name = "button_Luu";
+            this.button_Luu.Size = new System.Drawing.Size(80, 37);
+            this.button_Luu.TabIndex = 38;
+            this.button_Luu.Text = "Lưu";
+            this.button_Luu.UseVisualStyleBackColor = true;
+            this.button_Luu.Click += new System.EventHandler(this.button_Luu_Click);
             // 
-            // label_GhiChu
+            // button_Huy
             // 
-            this.label_GhiChu.AutoSize = true;
-            this.label_GhiChu.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_GhiChu.Location = new System.Drawing.Point(4, 136);
-            this.label_GhiChu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_GhiChu.Name = "label_GhiChu";
-            this.label_GhiChu.Size = new System.Drawing.Size(53, 15);
-            this.label_GhiChu.TabIndex = 18;
-            this.label_GhiChu.Text = "Ghi Chú:";
+            this.button_Huy.Location = new System.Drawing.Point(701, 240);
+            this.button_Huy.Name = "button_Huy";
+            this.button_Huy.Size = new System.Drawing.Size(82, 37);
+            this.button_Huy.TabIndex = 39;
+            this.button_Huy.Text = "Hủy";
+            this.button_Huy.UseVisualStyleBackColor = true;
+            this.button_Huy.Click += new System.EventHandler(this.button_Huy_Click);
             // 
-            // textBox_GhiChu
+            // label_ThongBao
             // 
-            this.textBox_GhiChu.Location = new System.Drawing.Point(128, 132);
-            this.textBox_GhiChu.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox_GhiChu.Name = "textBox_GhiChu";
-            this.textBox_GhiChu.Size = new System.Drawing.Size(348, 22);
-            this.textBox_GhiChu.TabIndex = 19;
-            // 
-            // comboBox_MaNV
-            // 
-            this.comboBox_MaNV.FormattingEnabled = true;
-            this.comboBox_MaNV.Location = new System.Drawing.Point(92, 74);
-            this.comboBox_MaNV.Name = "comboBox_MaNV";
-            this.comboBox_MaNV.Size = new System.Drawing.Size(141, 21);
-            this.comboBox_MaNV.TabIndex = 17;
+            this.label_ThongBao.AutoSize = true;
+            this.label_ThongBao.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_ThongBao.ForeColor = System.Drawing.Color.Red;
+            this.label_ThongBao.Location = new System.Drawing.Point(577, 198);
+            this.label_ThongBao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_ThongBao.Name = "label_ThongBao";
+            this.label_ThongBao.Size = new System.Drawing.Size(0, 15);
+            this.label_ThongBao.TabIndex = 40;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 285);
+            this.Controls.Add(this.label_ThongBao);
+            this.Controls.Add(this.button_Huy);
+            this.Controls.Add(this.button_Luu);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -386,6 +401,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -393,7 +409,6 @@
 
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label_NgayTao;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label_Ma_NV;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox textBox_TT_VuiChoi;
@@ -411,7 +426,6 @@
         private System.Windows.Forms.Label label_MaBC;
         private System.Windows.Forms.Label label_BaoCaoNgay;
         private System.Windows.Forms.TextBox textBox_TenBC;
-        private System.Windows.Forms.Label label_dd_MM_yyyy_1;
         private System.Windows.Forms.DateTimePicker dateTimePicker_NgayTao;
         private System.Windows.Forms.ComboBox comboBox_MaTre;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Ngay;
@@ -419,5 +433,8 @@
         private System.Windows.Forms.TextBox textBox_GhiChu;
         private System.Windows.Forms.Label label_GhiChu;
         private System.Windows.Forms.ComboBox comboBox_MaNV;
+        private System.Windows.Forms.Button button_Luu;
+        private System.Windows.Forms.Button button_Huy;
+        private System.Windows.Forms.Label label_ThongBao;
     }
 }
