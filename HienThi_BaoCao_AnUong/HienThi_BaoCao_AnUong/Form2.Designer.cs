@@ -1,6 +1,6 @@
 ﻿namespace HienThi_BaoCao_AnUong
 {
-    partial class Form2
+    partial class Form_Edit
     {
         /// <summary>
         /// Required designer variable.
@@ -376,7 +376,7 @@
             this.label_ThongBao.Size = new System.Drawing.Size(0, 15);
             this.label_ThongBao.TabIndex = 40;
             // 
-            // Form2
+            // Form_Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -388,10 +388,10 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form2";
+            this.Name = "Form_Edit";
             this.Text = "Chỉnh sửa thông tin Báo Cáo Ăn Uống";
-            this.Activated += new System.EventHandler(this.Form2_Activated);
-            this.Deactivate += new System.EventHandler(this.Form2_Deactivated);
+            this.Activated += new System.EventHandler(this.Form_Edit_Activated);
+            this.Deactivate += new System.EventHandler(this.Form_Edit_Deactivated);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);

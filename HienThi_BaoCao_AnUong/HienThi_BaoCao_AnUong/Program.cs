@@ -18,7 +18,7 @@ namespace HienThi_BaoCao_AnUong
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new Form1());
+                Application.Run(new Form_View());
             }
             catch(Exception ex)
             {

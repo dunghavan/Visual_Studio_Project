@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace HienThi_BaoCao_AnUong
 {
-    public partial class Form2 : Form
+    public partial class Form_Edit : Form
     {
-        public Form2(Form callingForm)
+        public Form_Edit(Form callingForm)
         {
-            f1 = callingForm as Form1;
+            f1 = callingForm as Form_View;
             InitializeComponent();
         }
-        private Form1 f1 = new Form1();
+        private Form_View f1 = new Form_View();
         SqlConnection conn = new SqlConnection("Data Source=REUS;Initial Catalog=QLNT;Integrated Security=True");
         SqlDataReader reader;
         DataTable dt_MaTre;
@@ -28,8 +28,8 @@ namespace HienThi_BaoCao_AnUong
         SqlCommand sqlcmd;
         SqlParameter _ma_BC, _ten_BC, _ma_Tre, _ngay, _tinh_Trang_An, _tinh_Trang_Ngu,
             _tinh_Trang_VuiChoi, _ma_NV, _ngay_Tao, _ghiChu;
-        
-        private void Form2_Activated(object sender, EventArgs e)
+
+        private void Form_Edit_Activated(object sender, EventArgs e)
         {
             try
             {
@@ -80,7 +80,7 @@ namespace HienThi_BaoCao_AnUong
             }
         }
 
-        private void Form2_Deactivated(object sender, EventArgs e)
+        private void Form_Edit_Deactivated(object sender, EventArgs e)
         {
         }
 
@@ -108,33 +108,38 @@ namespace HienThi_BaoCao_AnUong
                     sqlcmd.CommandType = CommandType.StoredProcedure;
                     // Construction Parameters:
                     _ma_BC = sqlcmd.Parameters.Add("@p_MA_BC", SqlDbType.NVarChar, 10);
-                    _ten_BC = sqlcmd.Parameters.Add("@p_TEN_BC", SqlDbType.NVarChar, 10);
+                    _ten_BC = sqlcmd.Parameters.Add("@p_TEN_BC", SqlDbType.NVarChar, 50);
                     _ma_Tre = sqlcmd.Parameters.Add("@p_MA_TRE", SqlDbType.NVarChar, 10);
                     _ngay = sqlcmd.Parameters.Add("@p_NGAY", SqlDbType.NVarChar, 30);
                     _tinh_Trang_An = sqlcmd.Parameters.Add("@p_TINHTRANG_AN", SqlDbType.NVarChar, 100);
                     _tinh_Trang_Ngu = sqlcmd.Parameters.Add("@p_TINHTRANG_NGU", SqlDbType.NVarChar, 100);
-                    _tinh_Trang_VuiChoi = sqlcmd.Parameters.Add("@p_TINHTRANG_VUICHOI", SqlDbType.NVarChar, 10);
+                    _tinh_Trang_VuiChoi = sqlcmd.Parameters.Add("@p_TINHTRANG_VUICHOI", SqlDbType.NVarChar, 100);
                     _ma_NV = sqlcmd.Parameters.Add("@p_MA_NV", SqlDbType.NVarChar, 10);
                     _ngay_Tao = sqlcmd.Parameters.Add("@p_NGAY_TAO", SqlDbType.NVarChar, 30);
                     _ghiChu = sqlcmd.Parameters.Add("@p_GHI_CHU", SqlDbType.NVarChar, 1000);
                     // Transmitted value to Parameter:
                     _ma_BC.Value = textBox_MaBC.Text;
                     _ten_BC.Value = textBox_TenBC.Text;
-                    _ma_Tre.Value = comboBox_MaTre;
-                    _ngay.Value = dateTimePicker_Ngay.Text.ToString();
+                    _ma_Tre.Value = comboBox_MaTre.Text;
+                    _ngay.Value = dateTimePicker_Ngay.Text;
                     _tinh_Trang_An.Value = textBox_TT_An.Text;
                     _tinh_Trang_Ngu.Value = textBox_TT_Ngu.Text;
                     _tinh_Trang_VuiChoi.Value = textBox_TT_VuiChoi.Text;
                     _ma_NV.Value = comboBox_MaNV.Text;
-                    _ngay_Tao.Value = dateTimePicker_NgayTao.Text.ToString();
+                    _ngay_Tao.Value = dateTimePicker_NgayTao.Text;
                     sqlcmd.ExecuteNonQuery();
                     conn.Close();
+                    // Cập nhật kết quả:
+                    f1.TimKiem();
+                    Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi: " + ex.Message);
                     conn.Close();
                 }
+                f1.label_ThongBao.Text = "Cập nhật thành công!";
+                
             }
         }
 
