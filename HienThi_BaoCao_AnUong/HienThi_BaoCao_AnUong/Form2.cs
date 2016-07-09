@@ -17,6 +17,7 @@ namespace HienThi_BaoCao_AnUong
         {
             f1 = callingForm as Form_View;
             InitializeComponent();
+            button_Luu.Enabled = false;
         }
         private Form_View f1 = new Form_View();
         SqlConnection conn = new SqlConnection("Data Source=REUS;Initial Catalog=QLNT;Integrated Security=True");
@@ -28,6 +29,56 @@ namespace HienThi_BaoCao_AnUong
         SqlCommand sqlcmd;
         SqlParameter _ma_BC, _ten_BC, _ma_Tre, _ngay, _tinh_Trang_An, _tinh_Trang_Ngu,
             _tinh_Trang_VuiChoi, _ma_NV, _ngay_Tao, _ghiChu;
+
+        private void comboBox_MaTre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //button_Luu.Enabled = true;
+        }
+
+        private void textBox_HoTen_TextChanged(object sender, EventArgs e)
+        {
+            //button_Luu.Enabled = true;
+        }
+
+        private void textBox_TT_Ngu_TextChanged(object sender, EventArgs e)
+        {
+            //button_Luu.Enabled = true;
+        }
+
+        private void textBox_TT_VuiChoi_TextChanged(object sender, EventArgs e)
+        {
+            //button_Luu.Enabled = true;
+        }
+
+        private void textBox_TT_An_TextChanged(object sender, EventArgs e)
+        {
+            //button_Luu.Enabled = true;
+        }
+
+        private void textBox_GhiChu_TextChanged(object sender, EventArgs e)
+        {
+            //button_Luu.Enabled = true;
+        }
+
+        private void comboBox_MaNV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //button_Luu.Enabled = true;
+        }
+
+        private void dateTimePicker_Ngay_ValueChanged(object sender, EventArgs e)
+        {
+            button_Luu.Enabled = true;
+        }
+
+        private void textBox_TenBC_TextChanged(object sender, EventArgs e)
+        {
+            //button_Luu.Enabled = true;
+        }
+
+        private void textBox_MaBC_TextChanged(object sender, EventArgs e)
+        {
+            button_Luu.Enabled = true;
+        }
 
         private void Form_Edit_Activated(object sender, EventArgs e)
         {
@@ -88,17 +139,28 @@ namespace HienThi_BaoCao_AnUong
         {
             bool pass = true;
             // Kiểm tra các ràng buộc:
-            if (!maTre_is_Exist(comboBox_MaTre.Text))
+            if (comboBox_MaTre.Text == "")
             {
                 pass = false;
-                label_ThongBao.Text = "Lưu không thành công! \n Không tồn tại trẻ có mã: " + comboBox_MaTre.Text;
+                label_ThongBao.Text = "Lưu không thành công! \n Hãy nhập mã trẻ." + comboBox_MaTre.Text;
             }
-            if (!maNV_is_Exist(comboBox_MaNV.Text))
+            else if (!maTre_is_Exist(comboBox_MaTre.Text))
+                {
+                    pass = false;
+                    label_ThongBao.Text = "Lưu không thành công! \n Không tồn tại trẻ có mã: " + comboBox_MaTre.Text;
+                }
+
+            if (comboBox_MaNV.Text == "")
             {
                 pass = false;
-                label_ThongBao.Text = "Lưu không thành công! \n Không tồn tại nhân viên có mã: " + comboBox_MaTre.Text;
+                label_ThongBao.Text = "Lưu không thành công! \n Hãy nhập mã nhân viên." + comboBox_MaTre.Text;
             }
-            if(pass == true)
+            else if (!maNV_is_Exist(comboBox_MaNV.Text))
+                {
+                    pass = false;
+                    label_ThongBao.Text = "Lưu không thành công! \n Không tồn tại nhân viên có mã: " + comboBox_MaTre.Text;
+                }
+            if (pass == true)
             {
                 try
                 {
@@ -139,6 +201,8 @@ namespace HienThi_BaoCao_AnUong
                     conn.Close();
                 }
                 f1.label_ThongBao.Text = "Cập nhật thành công!";
+                f1.button_Sua.Enabled = false;
+                f1.button_Xoa.Enabled = false;
                 
             }
         }

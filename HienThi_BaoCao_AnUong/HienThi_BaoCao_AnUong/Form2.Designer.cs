@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Edit));
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.comboBox_MaNV = new System.Windows.Forms.ComboBox();
             this.dateTimePicker_NgayTao = new System.Windows.Forms.DateTimePicker();
@@ -54,9 +55,9 @@
             this.label_BaoCaoNgay = new System.Windows.Forms.Label();
             this.textBox_MaBC = new System.Windows.Forms.TextBox();
             this.textBox_TenBC = new System.Windows.Forms.TextBox();
-            this.button_Luu = new System.Windows.Forms.Button();
-            this.button_Huy = new System.Windows.Forms.Button();
             this.label_ThongBao = new System.Windows.Forms.Label();
+            this.button_Huy = new DevExpress.XtraEditors.SimpleButton();
+            this.button_Luu = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -83,6 +84,7 @@
             this.comboBox_MaNV.Name = "comboBox_MaNV";
             this.comboBox_MaNV.Size = new System.Drawing.Size(141, 21);
             this.comboBox_MaNV.TabIndex = 17;
+            this.comboBox_MaNV.SelectedIndexChanged += new System.EventHandler(this.comboBox_MaNV_SelectedIndexChanged);
             // 
             // dateTimePicker_NgayTao
             // 
@@ -142,6 +144,7 @@
             this.textBox_GhiChu.Name = "textBox_GhiChu";
             this.textBox_GhiChu.Size = new System.Drawing.Size(348, 22);
             this.textBox_GhiChu.TabIndex = 19;
+            this.textBox_GhiChu.TextChanged += new System.EventHandler(this.textBox_GhiChu_TextChanged);
             // 
             // label_GhiChu
             // 
@@ -161,6 +164,7 @@
             this.textBox_TT_VuiChoi.Name = "textBox_TT_VuiChoi";
             this.textBox_TT_VuiChoi.Size = new System.Drawing.Size(348, 22);
             this.textBox_TT_VuiChoi.TabIndex = 17;
+            this.textBox_TT_VuiChoi.TextChanged += new System.EventHandler(this.textBox_TT_VuiChoi_TextChanged);
             // 
             // label_TinhTrangAn
             // 
@@ -202,6 +206,7 @@
             this.textBox_TT_An.Name = "textBox_TT_An";
             this.textBox_TT_An.Size = new System.Drawing.Size(348, 22);
             this.textBox_TT_An.TabIndex = 14;
+            this.textBox_TT_An.TextChanged += new System.EventHandler(this.textBox_TT_An_TextChanged);
             // 
             // textBox_TT_Ngu
             // 
@@ -210,6 +215,7 @@
             this.textBox_TT_Ngu.Name = "textBox_TT_Ngu";
             this.textBox_TT_Ngu.Size = new System.Drawing.Size(348, 22);
             this.textBox_TT_Ngu.TabIndex = 16;
+            this.textBox_TT_Ngu.TextChanged += new System.EventHandler(this.textBox_TT_Ngu_TextChanged);
             // 
             // groupBox2
             // 
@@ -233,6 +239,7 @@
             this.comboBox_MaTre.Name = "comboBox_MaTre";
             this.comboBox_MaTre.Size = new System.Drawing.Size(141, 24);
             this.comboBox_MaTre.TabIndex = 16;
+            this.comboBox_MaTre.SelectedIndexChanged += new System.EventHandler(this.comboBox_MaTre_SelectedIndexChanged);
             // 
             // label_MaTre
             // 
@@ -289,11 +296,13 @@
             // 
             this.dateTimePicker_Ngay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker_Ngay.Location = new System.Drawing.Point(97, 108);
-            this.dateTimePicker_Ngay.MaxDate = new System.DateTime(2016, 12, 25, 23, 59, 59, 0);
+            this.dateTimePicker_Ngay.MaxDate = new System.DateTime(2016, 7, 9, 0, 0, 0, 0);
             this.dateTimePicker_Ngay.MinDate = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker_Ngay.Name = "dateTimePicker_Ngay";
             this.dateTimePicker_Ngay.Size = new System.Drawing.Size(140, 22);
             this.dateTimePicker_Ngay.TabIndex = 38;
+            this.dateTimePicker_Ngay.Value = new System.DateTime(2016, 7, 9, 0, 0, 0, 0);
+            this.dateTimePicker_Ngay.ValueChanged += new System.EventHandler(this.dateTimePicker_Ngay_ValueChanged);
             // 
             // label_TenBC
             // 
@@ -344,26 +353,7 @@
             this.textBox_TenBC.Name = "textBox_TenBC";
             this.textBox_TenBC.Size = new System.Drawing.Size(140, 22);
             this.textBox_TenBC.TabIndex = 12;
-            // 
-            // button_Luu
-            // 
-            this.button_Luu.Location = new System.Drawing.Point(591, 240);
-            this.button_Luu.Name = "button_Luu";
-            this.button_Luu.Size = new System.Drawing.Size(80, 37);
-            this.button_Luu.TabIndex = 38;
-            this.button_Luu.Text = "Lưu";
-            this.button_Luu.UseVisualStyleBackColor = true;
-            this.button_Luu.Click += new System.EventHandler(this.button_Luu_Click);
-            // 
-            // button_Huy
-            // 
-            this.button_Huy.Location = new System.Drawing.Point(701, 240);
-            this.button_Huy.Name = "button_Huy";
-            this.button_Huy.Size = new System.Drawing.Size(82, 37);
-            this.button_Huy.TabIndex = 39;
-            this.button_Huy.Text = "Hủy";
-            this.button_Huy.UseVisualStyleBackColor = true;
-            this.button_Huy.Click += new System.EventHandler(this.button_Huy_Click);
+            this.textBox_TenBC.TextChanged += new System.EventHandler(this.textBox_TenBC_TextChanged);
             // 
             // label_ThongBao
             // 
@@ -376,18 +366,39 @@
             this.label_ThongBao.Size = new System.Drawing.Size(0, 15);
             this.label_ThongBao.TabIndex = 40;
             // 
+            // button_Huy
+            // 
+            this.button_Huy.Image = global::HienThi_BaoCao_AnUong.Properties.Resources.cancel;
+            this.button_Huy.Location = new System.Drawing.Point(701, 241);
+            this.button_Huy.Name = "button_Huy";
+            this.button_Huy.Size = new System.Drawing.Size(82, 36);
+            this.button_Huy.TabIndex = 42;
+            this.button_Huy.Text = "Hủy";
+            this.button_Huy.Click += new System.EventHandler(this.button_Huy_Click);
+            // 
+            // button_Luu
+            // 
+            this.button_Luu.Image = global::HienThi_BaoCao_AnUong.Properties.Resources.save;
+            this.button_Luu.Location = new System.Drawing.Point(598, 241);
+            this.button_Luu.Name = "button_Luu";
+            this.button_Luu.Size = new System.Drawing.Size(82, 35);
+            this.button_Luu.TabIndex = 41;
+            this.button_Luu.Text = "Lưu";
+            this.button_Luu.Click += new System.EventHandler(this.button_Luu_Click);
+            // 
             // Form_Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 285);
-            this.Controls.Add(this.label_ThongBao);
+            this.ClientSize = new System.Drawing.Size(820, 286);
             this.Controls.Add(this.button_Huy);
             this.Controls.Add(this.button_Luu);
+            this.Controls.Add(this.label_ThongBao);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Edit";
             this.Text = "Chỉnh sửa thông tin Báo Cáo Ăn Uống";
             this.Activated += new System.EventHandler(this.Form_Edit_Activated);
@@ -433,8 +444,8 @@
         private System.Windows.Forms.TextBox textBox_GhiChu;
         private System.Windows.Forms.Label label_GhiChu;
         private System.Windows.Forms.ComboBox comboBox_MaNV;
-        private System.Windows.Forms.Button button_Luu;
-        private System.Windows.Forms.Button button_Huy;
         private System.Windows.Forms.Label label_ThongBao;
+        private DevExpress.XtraEditors.SimpleButton button_Luu;
+        private DevExpress.XtraEditors.SimpleButton button_Huy;
     }
 }

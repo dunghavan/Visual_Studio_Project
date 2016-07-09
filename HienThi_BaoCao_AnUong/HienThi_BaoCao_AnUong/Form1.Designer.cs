@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_View));
             this.label_MaBC = new System.Windows.Forms.Label();
             this.label_TenBC = new System.Windows.Forms.Label();
             this.label_TenTre = new System.Windows.Forms.Label();
@@ -42,7 +43,7 @@
             this.textBox_Ma_Nguoi_Tao = new System.Windows.Forms.TextBox();
             this.textBox_Ngay_Tao = new System.Windows.Forms.TextBox();
             this.label_dd_MM_yyyy_1 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_date_format = new System.Windows.Forms.Label();
             this.label_SapXep = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox_BaoCaoNgay = new DevExpress.XtraEditors.TextEdit();
@@ -66,6 +67,7 @@
             this.button_Sua = new DevExpress.XtraEditors.SimpleButton();
             this.button_Xoa = new DevExpress.XtraEditors.SimpleButton();
             this.button_Thoat = new DevExpress.XtraEditors.SimpleButton();
+            this.label_SoLuong = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textBox_BaoCaoNgay.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox_MaBC.Properties)).BeginInit();
@@ -154,12 +156,13 @@
             // 
             this.label_TinhTrangVuiChoi.AutoSize = true;
             this.label_TinhTrangVuiChoi.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_TinhTrangVuiChoi.Location = new System.Drawing.Point(4, 65);
+            this.label_TinhTrangVuiChoi.Location = new System.Drawing.Point(2, 108);
             this.label_TinhTrangVuiChoi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_TinhTrangVuiChoi.Name = "label_TinhTrangVuiChoi";
             this.label_TinhTrangVuiChoi.Size = new System.Drawing.Size(118, 15);
             this.label_TinhTrangVuiChoi.TabIndex = 10;
             this.label_TinhTrangVuiChoi.Text = "Tình Trạng Vui Chơi:";
+            this.label_TinhTrangVuiChoi.Click += new System.EventHandler(this.label_TinhTrangVuiChoi_Click);
             // 
             // label_TinhTrangNgu
             // 
@@ -176,12 +179,13 @@
             // 
             this.label_TinhTrangAn.AutoSize = true;
             this.label_TinhTrangAn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_TinhTrangAn.Location = new System.Drawing.Point(4, 102);
+            this.label_TinhTrangAn.Location = new System.Drawing.Point(2, 69);
             this.label_TinhTrangAn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_TinhTrangAn.Name = "label_TinhTrangAn";
             this.label_TinhTrangAn.Size = new System.Drawing.Size(90, 15);
             this.label_TinhTrangAn.TabIndex = 8;
             this.label_TinhTrangAn.Text = "Tình Trạng Ăn:";
+            this.label_TinhTrangAn.Click += new System.EventHandler(this.label_TinhTrangAn_Click);
             // 
             // label_Ma_NV
             // 
@@ -209,6 +213,7 @@
             this.textBox_Ma_Nguoi_Tao.Name = "textBox_Ma_Nguoi_Tao";
             this.textBox_Ma_Nguoi_Tao.Size = new System.Drawing.Size(136, 22);
             this.textBox_Ma_Nguoi_Tao.TabIndex = 23;
+            this.textBox_Ma_Nguoi_Tao.TextChanged += new System.EventHandler(this.textBox_Ma_Nguoi_Tao_TextChanged);
             // 
             // textBox_Ngay_Tao
             // 
@@ -217,6 +222,7 @@
             this.textBox_Ngay_Tao.Name = "textBox_Ngay_Tao";
             this.textBox_Ngay_Tao.Size = new System.Drawing.Size(136, 22);
             this.textBox_Ngay_Tao.TabIndex = 24;
+            this.textBox_Ngay_Tao.TextChanged += new System.EventHandler(this.textBox_Ngay_Tao_TextChanged);
             // 
             // label_dd_MM_yyyy_1
             // 
@@ -230,17 +236,17 @@
             this.label_dd_MM_yyyy_1.TabIndex = 25;
             this.label_dd_MM_yyyy_1.Text = "dd-MM-yyyy";
             // 
-            // label1
+            // label_date_format
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(148, 54);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 15);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "dd-MM-yyyy";
+            this.label_date_format.AutoSize = true;
+            this.label_date_format.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_date_format.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label_date_format.Location = new System.Drawing.Point(148, 54);
+            this.label_date_format.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_date_format.Name = "label_date_format";
+            this.label_date_format.Size = new System.Drawing.Size(75, 15);
+            this.label_date_format.TabIndex = 26;
+            this.label_date_format.Text = "dd-MM-yyyy";
             // 
             // label_SapXep
             // 
@@ -281,6 +287,7 @@
             this.textBox_BaoCaoNgay.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.textBox_BaoCaoNgay.Size = new System.Drawing.Size(140, 22);
             this.textBox_BaoCaoNgay.TabIndex = 50;
+            this.textBox_BaoCaoNgay.EditValueChanged += new System.EventHandler(this.textBox_BaoCaoNgay_EditValueChanged);
             // 
             // textBox_MaBC
             // 
@@ -289,6 +296,7 @@
             this.textBox_MaBC.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.textBox_MaBC.Size = new System.Drawing.Size(140, 22);
             this.textBox_MaBC.TabIndex = 40;
+            this.textBox_MaBC.EditValueChanged += new System.EventHandler(this.textBox_MaBC_EditValueChanged);
             // 
             // textBox_TenBC
             // 
@@ -297,6 +305,7 @@
             this.textBox_TenBC.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.textBox_TenBC.Size = new System.Drawing.Size(140, 22);
             this.textBox_TenBC.TabIndex = 41;
+            this.textBox_TenBC.EditValueChanged += new System.EventHandler(this.textBox_TenBC_EditValueChanged);
             // 
             // groupBox2
             // 
@@ -320,6 +329,7 @@
             this.textBox_HoTen.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.textBox_HoTen.Size = new System.Drawing.Size(192, 22);
             this.textBox_HoTen.TabIndex = 48;
+            this.textBox_HoTen.EditValueChanged += new System.EventHandler(this.textBox_HoTen_EditValueChanged);
             // 
             // textBox_MaTre
             // 
@@ -328,6 +338,7 @@
             this.textBox_MaTre.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.textBox_MaTre.Size = new System.Drawing.Size(192, 22);
             this.textBox_MaTre.TabIndex = 49;
+            this.textBox_MaTre.EditValueChanged += new System.EventHandler(this.textBox_MaTre_EditValueChanged);
             // 
             // groupBox3
             // 
@@ -348,19 +359,21 @@
             // 
             // textBox_TT_An
             // 
-            this.textBox_TT_An.Location = new System.Drawing.Point(128, 99);
+            this.textBox_TT_An.Location = new System.Drawing.Point(126, 66);
             this.textBox_TT_An.Name = "textBox_TT_An";
             this.textBox_TT_An.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.textBox_TT_An.Size = new System.Drawing.Size(213, 22);
             this.textBox_TT_An.TabIndex = 45;
+            this.textBox_TT_An.EditValueChanged += new System.EventHandler(this.textBox_TT_An_EditValueChanged);
             // 
             // textBox_TT_VuiChoi
             // 
-            this.textBox_TT_VuiChoi.Location = new System.Drawing.Point(128, 62);
+            this.textBox_TT_VuiChoi.Location = new System.Drawing.Point(126, 105);
             this.textBox_TT_VuiChoi.Name = "textBox_TT_VuiChoi";
             this.textBox_TT_VuiChoi.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.textBox_TT_VuiChoi.Size = new System.Drawing.Size(213, 22);
             this.textBox_TT_VuiChoi.TabIndex = 46;
+            this.textBox_TT_VuiChoi.EditValueChanged += new System.EventHandler(this.textBox_TT_VuiChoi_EditValueChanged);
             // 
             // textBox_TT_Ngu
             // 
@@ -369,13 +382,14 @@
             this.textBox_TT_Ngu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.textBox_TT_Ngu.Size = new System.Drawing.Size(213, 22);
             this.textBox_TT_Ngu.TabIndex = 47;
+            this.textBox_TT_Ngu.EditValueChanged += new System.EventHandler(this.textBox_TT_Ngu_EditValueChanged);
             // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.groupBox4.Controls.Add(this.textBox_Ngay_Tao);
             this.groupBox4.Controls.Add(this.label_NgayTao);
-            this.groupBox4.Controls.Add(this.label1);
+            this.groupBox4.Controls.Add(this.label_date_format);
             this.groupBox4.Controls.Add(this.textBox_Ma_Nguoi_Tao);
             this.groupBox4.Controls.Add(this.label_Ma_NV);
             this.groupBox4.Location = new System.Drawing.Point(903, 0);
@@ -389,7 +403,7 @@
             this.label_ThongBao.AutoSize = true;
             this.label_ThongBao.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_ThongBao.ForeColor = System.Drawing.Color.Blue;
-            this.label_ThongBao.Location = new System.Drawing.Point(551, 528);
+            this.label_ThongBao.Location = new System.Drawing.Point(651, 528);
             this.label_ThongBao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_ThongBao.Name = "label_ThongBao";
             this.label_ThongBao.Size = new System.Drawing.Size(0, 17);
@@ -401,7 +415,7 @@
             this.gridControl1.Location = new System.Drawing.Point(12, 240);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1133, 269);
+            this.gridControl1.Size = new System.Drawing.Size(1125, 269);
             this.gridControl1.TabIndex = 38;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1,
@@ -418,6 +432,11 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsCustomization.AllowSort = false;
+            this.gridView1.OptionsFilter.AllowColumnMRUFilterList = false;
+            this.gridView1.OptionsFilter.AllowFilterEditor = false;
+            this.gridView1.OptionsFilter.AllowFilterIncrementalSearch = false;
+            this.gridView1.OptionsFilter.AllowMRUFilterList = false;
+            this.gridView1.OptionsFilter.AllowMultiSelectInCheckedFilterPopup = false;
             this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView1.OptionsSelection.MultiSelect = true;
             // 
@@ -442,54 +461,78 @@
             "Ngày tháng giảm dần"});
             this.comboBox_SapXep.Size = new System.Drawing.Size(154, 22);
             this.comboBox_SapXep.TabIndex = 39;
+            this.comboBox_SapXep.SelectedIndexChanged += new System.EventHandler(this.comboBox_SapXep_SelectedIndexChanged);
             // 
             // button_TimKiem
             // 
-            this.button_TimKiem.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.button_TimKiem.Location = new System.Drawing.Point(554, 184);
+            this.button_TimKiem.Image = global::HienThi_BaoCao_AnUong.Properties.Resources.Search;
+            this.button_TimKiem.Location = new System.Drawing.Point(554, 197);
             this.button_TimKiem.Name = "button_TimKiem";
-            this.button_TimKiem.Size = new System.Drawing.Size(123, 49);
+            this.button_TimKiem.Size = new System.Drawing.Size(120, 36);
             this.button_TimKiem.TabIndex = 40;
             this.button_TimKiem.Text = "Tìm Kiếm";
+            this.button_TimKiem.Click += new System.EventHandler(this.button_TimKiem_Click);
             // 
             // button_NhapLaiTatCa
             // 
+            this.button_NhapLaiTatCa.Image = global::HienThi_BaoCao_AnUong.Properties.Resources.undo;
             this.button_NhapLaiTatCa.Location = new System.Drawing.Point(710, 197);
             this.button_NhapLaiTatCa.Name = "button_NhapLaiTatCa";
             this.button_NhapLaiTatCa.Size = new System.Drawing.Size(123, 36);
             this.button_NhapLaiTatCa.TabIndex = 41;
             this.button_NhapLaiTatCa.Text = "Nhập lại tất cả";
+            this.button_NhapLaiTatCa.Click += new System.EventHandler(this.button_NhapLaiTatCa_Click);
             // 
             // button_Sua
             // 
-            this.button_Sua.Location = new System.Drawing.Point(726, 518);
+            this.button_Sua.Enabled = false;
+            this.button_Sua.Image = global::HienThi_BaoCao_AnUong.Properties.Resources.EditHS;
+            this.button_Sua.Location = new System.Drawing.Point(874, 518);
             this.button_Sua.Name = "button_Sua";
-            this.button_Sua.Size = new System.Drawing.Size(124, 38);
+            this.button_Sua.Size = new System.Drawing.Size(84, 38);
             this.button_Sua.TabIndex = 42;
             this.button_Sua.Text = "Sửa";
+            this.button_Sua.Click += new System.EventHandler(this.button_Sua_Click);
             // 
             // button_Xoa
             // 
-            this.button_Xoa.Location = new System.Drawing.Point(872, 518);
+            this.button_Xoa.Enabled = false;
+            this.button_Xoa.Image = global::HienThi_BaoCao_AnUong.Properties.Resources.DeleteData;
+            this.button_Xoa.Location = new System.Drawing.Point(964, 518);
             this.button_Xoa.Name = "button_Xoa";
-            this.button_Xoa.Size = new System.Drawing.Size(124, 38);
+            this.button_Xoa.Size = new System.Drawing.Size(84, 38);
             this.button_Xoa.TabIndex = 43;
             this.button_Xoa.Text = "Xóa";
             this.button_Xoa.Click += new System.EventHandler(this.button_Xoa_Click);
             // 
             // button_Thoat
             // 
-            this.button_Thoat.Location = new System.Drawing.Point(1021, 518);
+            this.button_Thoat.Image = global::HienThi_BaoCao_AnUong.Properties.Resources.cross_icon;
+            this.button_Thoat.Location = new System.Drawing.Point(1053, 518);
             this.button_Thoat.Name = "button_Thoat";
-            this.button_Thoat.Size = new System.Drawing.Size(124, 38);
+            this.button_Thoat.Size = new System.Drawing.Size(84, 38);
             this.button_Thoat.TabIndex = 44;
             this.button_Thoat.Text = "Thoát";
+            this.button_Thoat.Click += new System.EventHandler(this.button_Thoat_Click);
+            // 
+            // label_SoLuong
+            // 
+            this.label_SoLuong.AutoSize = true;
+            this.label_SoLuong.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_SoLuong.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label_SoLuong.Location = new System.Drawing.Point(27, 530);
+            this.label_SoLuong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_SoLuong.Name = "label_SoLuong";
+            this.label_SoLuong.Size = new System.Drawing.Size(0, 17);
+            this.label_SoLuong.TabIndex = 27;
             // 
             // Form_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1149, 561);
+            this.Controls.Add(this.label_SoLuong);
             this.Controls.Add(this.button_Thoat);
             this.Controls.Add(this.button_Xoa);
             this.Controls.Add(this.button_Sua);
@@ -505,7 +548,10 @@
             this.Controls.Add(this.label_SapXep);
             this.Controls.Add(this.textBox_Ma_NV);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "Form_View";
             this.Text = "Báo Cáo Ăn Uống";
             this.groupBox1.ResumeLayout(false);
@@ -548,7 +594,7 @@
         private System.Windows.Forms.TextBox textBox_Ma_Nguoi_Tao;
         private System.Windows.Forms.TextBox textBox_Ngay_Tao;
         private System.Windows.Forms.Label label_dd_MM_yyyy_1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_date_format;
         private System.Windows.Forms.Label label_SapXep;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -556,7 +602,6 @@
         private System.Windows.Forms.GroupBox groupBox4;
         public System.Windows.Forms.Label label_ThongBao;
         private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraEditors.TextEdit textBox_MaBC;
         private DevExpress.XtraEditors.TextEdit textBox_TenBC;
@@ -569,9 +614,11 @@
         private DevExpress.XtraEditors.ComboBoxEdit comboBox_SapXep;
         private DevExpress.XtraEditors.SimpleButton button_TimKiem;
         private DevExpress.XtraEditors.SimpleButton button_NhapLaiTatCa;
-        private DevExpress.XtraEditors.SimpleButton button_Sua;
-        private DevExpress.XtraEditors.SimpleButton button_Xoa;
         private DevExpress.XtraEditors.SimpleButton button_Thoat;
+        public DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        public DevExpress.XtraEditors.SimpleButton button_Sua;
+        public DevExpress.XtraEditors.SimpleButton button_Xoa;
+        private System.Windows.Forms.Label label_SoLuong;
     }
 }
 

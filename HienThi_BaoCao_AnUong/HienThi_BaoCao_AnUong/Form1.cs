@@ -19,6 +19,7 @@ namespace HienThi_BaoCao_AnUong
         {
             InitializeComponent();
             comboBox_SapXep.SelectedItem = "--- default ---";
+            //gridView1.OptionsFilter.AllowFilter
         }
         SqlConnection conn = new SqlConnection("Data Source=REUS;Initial Catalog=QLNT;Integrated Security=True");
         SqlDataReader reader;
@@ -28,32 +29,134 @@ namespace HienThi_BaoCao_AnUong
         SqlParameter _ma_BC, _ten_BC, _ma_Tre, _ten_Tre, _ngay, _tinh_Trang_An, _tinh_Trang_Ngu, _tinh_Trang_VuiChoi,
                     _ma_NV, _ngay_Tao, _sort_by;
 
+        private void textBox_BaoCaoNgay_EditValueChanged(object sender, EventArgs e)
+        {
+            button_Sua.Enabled = false;
+            button_Xoa.Enabled = false;
+        }
+
+        private void textBox_MaTre_EditValueChanged(object sender, EventArgs e)
+        {
+            button_Sua.Enabled = false;
+            button_Xoa.Enabled = false;
+        }
+
+        private void textBox_HoTen_EditValueChanged(object sender, EventArgs e)
+        {
+            button_Sua.Enabled = false;
+            button_Xoa.Enabled = false;
+        }
+
+        private void comboBox_SapXep_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            button_Sua.Enabled = false;
+            button_Xoa.Enabled = false;
+        }
+
+        private void textBox_TT_Ngu_EditValueChanged(object sender, EventArgs e)
+        {
+            button_Sua.Enabled = false;
+            button_Xoa.Enabled = false;
+        }
+
+        private void textBox_TT_VuiChoi_EditValueChanged(object sender, EventArgs e)
+        {
+            button_Sua.Enabled = false;
+            button_Xoa.Enabled = false;
+        }
+
+        private void textBox_TT_An_EditValueChanged(object sender, EventArgs e)
+        {
+            button_Sua.Enabled = false;
+            button_Xoa.Enabled = false;
+        }
+
+        private void textBox_Ngay_Tao_TextChanged(object sender, EventArgs e)
+        {
+            button_Sua.Enabled = false;
+            button_Xoa.Enabled = false;
+        }
+
+        private void textBox_Ma_Nguoi_Tao_TextChanged(object sender, EventArgs e)
+        {
+            button_Sua.Enabled = false;
+            button_Xoa.Enabled = false;
+        }
+
+        private void label_TinhTrangAn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_TinhTrangVuiChoi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_TenBC_EditValueChanged(object sender, EventArgs e)
+        {
+            button_Sua.Enabled = false;
+            button_Xoa.Enabled = false;
+        }
+
+        private void textBox_MaBC_EditValueChanged(object sender, EventArgs e)
+        {
+            button_Sua.Enabled = false;
+            button_Xoa.Enabled = false;
+        }
+
+        private void button_TimKiem_Click(object sender, EventArgs e)
+        {
+            TimKiem();
+            button_Sua.Enabled = false;
+            button_Xoa.Enabled = false;
+        }
+
         private void button_Xoa_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            sqlcmd = new SqlCommand("BaoCao_An_Ngu_Del", conn);
-            sqlcmd.CommandType = CommandType.StoredProcedure;
-            SqlParameter Ma_BC = sqlcmd.Parameters.Add("@p_MA_BC", SqlDbType.NVarChar, 10);
-            sqlcmd.ExecuteNonQuery();
-            label_ThongBao.Text = "Đã xóa thành công!";
-            TimKiem();
+            try
+            {
+                conn.Open();
+                sqlcmd = new SqlCommand("BaoCao_An_Ngu_Del", conn);
+                sqlcmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter Ma_BC = sqlcmd.Parameters.Add("@p_MA_BC", SqlDbType.NVarChar, 10);
+                Ma_BC.Value = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[0]).ToString();
+                sqlcmd.ExecuteNonQuery();
+                label_ThongBao.Text = "Đã xóa thành công!";
+                conn.Close();
+                TimKiem();
+                button_Sua.Enabled = false;
+                button_Xoa.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi :" + ex.Message);
+                label_ThongBao.Text = "Xóa không thành công!";
+                label_ThongBao.ForeColor = System.Drawing.Color.Red;
+                conn.Close();
+            }
+            
         }
 
         private void gridView1_CellMouseClick(object sender, EventArgs e)
         {
-            maBC = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[0]).ToString();
-            tenBC = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[1]).ToString();
-            maTre = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[2]).ToString();
-            tenTre = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[3]).ToString();
-            ngay = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[4]).ToString();
-            ttAn = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[5]).ToString();
-            ttNgu = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[6]).ToString();
-            ttVuiChoi = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[7]).ToString();
-            maNV = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[8]).ToString();
-            ngayTao = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[9]).ToString();
-            ghiChu = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[10]).ToString();
-            button_Sua.Enabled = true;
-            button_Xoa.Enabled = true;
+            if(gridView1.RowCount != 0)
+            {
+                maBC = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[0]).ToString();
+                tenBC = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[1]).ToString();
+                maTre = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[2]).ToString();
+                tenTre = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[3]).ToString();
+                ngay = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[4]).ToString();
+                ttAn = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[5]).ToString();
+                ttNgu = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[6]).ToString();
+                ttVuiChoi = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[7]).ToString();
+                maNV = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[8]).ToString();
+                ngayTao = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[9]).ToString();
+                ghiChu = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[10]).ToString();
+                button_Sua.Enabled = true;
+                button_Xoa.Enabled = true;
+                label_ThongBao.Text = "";
+            }
 
         }
 
@@ -92,6 +195,8 @@ namespace HienThi_BaoCao_AnUong
             textBox_TT_VuiChoi.Text = null;
             textBox_Ngay_Tao.Text = null;
             textBox_Ma_Nguoi_Tao.Text = null;
+            button_Sua.Enabled = false;
+            button_Xoa.Enabled = false;
         }
 
         //internal Form_Edit f;
@@ -277,17 +382,14 @@ namespace HienThi_BaoCao_AnUong
                         break;
                 }
                 conn.Close();
+                label_SoLuong.Text = "Có tổng cộng " + gridView1.DataRowCount + " báo cáo";
             }
             catch (Exception ex)
             {
                 conn.Close();
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.StackTrace);
             }
     }
-    private void button_TimKiem_Click(object sender, EventArgs e)
-    {
-            TimKiem();
-    }
-        
+    
     }
 }
