@@ -89,3 +89,6 @@ C:\Users\Dung\Documents\Visual Studio 2015\Projects\HienThi_BaoCao_AnUong\HienTh
 C:\Users\Dung\Documents\Visual Studio 2015\Projects\HienThi_BaoCao_AnUong\HienThi_BaoCao_AnUong\obj\Debug\HienThi_BaoCao_AnUong.exe.licenses
 C:\Users\Dung\Documents\Visual Studio 2015\Projects\HienThi_BaoCao_AnUong\HienThi_BaoCao_AnUong\obj\Debug\HienThi_BaoCao_AnUong.Form_View.resources
 C:\Users\Dung\Documents\Visual Studio 2015\Projects\HienThi_BaoCao_AnUong\HienThi_BaoCao_AnUong\obj\Debug\HienThi_BaoCao_AnUong.Form_Edit.resources
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\HienThi_BaoCao_AnUong\HienThi_BaoCao_AnUong\obj\Debug\HienThi_BaoCao_AnUong.Form3.resources
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\HienThi_BaoCao_AnUong\HienThi_BaoCao_AnUong\bin\Debug\Sqlhelper.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\HienThi_BaoCao_AnUong\HienThi_BaoCao_AnUong\obj\Debug\HienThi_BaoCao_AnUong.Form4.resources

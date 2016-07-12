@@ -16,9 +16,12 @@ namespace HienThi_BaoCao_AnUong
         {
             try
             {
+                //Application.EnableVisualStyles();
+                //Application.SetCompatibleTextRenderingDefault(false);
+                //Application.Run(new Form_View());
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new Form_View());
+                Application.Run(new Form4());
             }
             catch(Exception ex)
             {

@@ -296,7 +296,7 @@
             // 
             this.dateTimePicker_Ngay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker_Ngay.Location = new System.Drawing.Point(97, 108);
-            this.dateTimePicker_Ngay.MaxDate = new System.DateTime(2016, 7, 9, 0, 0, 0, 0);
+            this.dateTimePicker_Ngay.MaxDate = new System.DateTime(2016, 7, 12, 0, 0, 0, 0);
             this.dateTimePicker_Ngay.MinDate = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker_Ngay.Name = "dateTimePicker_Ngay";
             this.dateTimePicker_Ngay.Size = new System.Drawing.Size(140, 22);
@@ -390,6 +390,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.RosyBrown;
             this.ClientSize = new System.Drawing.Size(820, 286);
             this.Controls.Add(this.button_Huy);
             this.Controls.Add(this.button_Luu);
@@ -399,6 +400,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form_Edit";
             this.Text = "Chỉnh sửa thông tin Báo Cáo Ăn Uống";
             this.Activated += new System.EventHandler(this.Form_Edit_Activated);

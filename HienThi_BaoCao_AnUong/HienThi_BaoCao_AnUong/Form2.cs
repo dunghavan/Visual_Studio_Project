@@ -189,6 +189,7 @@ namespace HienThi_BaoCao_AnUong
                     _tinh_Trang_VuiChoi.Value = textBox_TT_VuiChoi.Text;
                     _ma_NV.Value = comboBox_MaNV.Text;
                     _ngay_Tao.Value = dateTimePicker_NgayTao.Text;
+                    _ghiChu.Value = textBox_GhiChu.Text;
                     sqlcmd.ExecuteNonQuery();
                     conn.Close();
                     // Cập nhật kết quả:

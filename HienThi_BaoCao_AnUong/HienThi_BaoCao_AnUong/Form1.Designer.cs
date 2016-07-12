@@ -284,7 +284,7 @@
             // 
             this.textBox_BaoCaoNgay.Location = new System.Drawing.Point(106, 109);
             this.textBox_BaoCaoNgay.Name = "textBox_BaoCaoNgay";
-            this.textBox_BaoCaoNgay.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.textBox_BaoCaoNgay.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.textBox_BaoCaoNgay.Size = new System.Drawing.Size(140, 22);
             this.textBox_BaoCaoNgay.TabIndex = 50;
             this.textBox_BaoCaoNgay.EditValueChanged += new System.EventHandler(this.textBox_BaoCaoNgay_EditValueChanged);

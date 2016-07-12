@@ -162,7 +162,7 @@ namespace HienThi_BaoCao_AnUong
 
         private void button_Thoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Close();
         }
 
         public string maBC, tenBC, maTre, tenTre, ngay, ttAn, ttNgu, ttVuiChoi, maNV, ngayTao, ghiChu;
