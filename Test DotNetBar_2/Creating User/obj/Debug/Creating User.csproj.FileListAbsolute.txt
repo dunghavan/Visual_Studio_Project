@@ -1,0 +1,41 @@
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\Creating User.exe
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\Creating User.pdb
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\DevExpress.BonusSkins.v15.2.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\DevExpress.Data.v15.2.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\DevExpress.Sparkline.v15.2.Core.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\DevExpress.Utils.v15.2.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\DevExpress.XtraEditors.v15.2.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\DevExpress.Printing.v15.2.Core.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\DevExpress.Data.v15.2.xml
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\DevExpress.Utils.v15.2.xml
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\DevExpress.Sparkline.v15.2.Core.xml
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\DevExpress.XtraEditors.v15.2.xml
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\DevExpress.Printing.v15.2.Core.xml
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\de\DevExpress.Data.v15.2.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\es\DevExpress.Data.v15.2.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\ja\DevExpress.Data.v15.2.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\ru\DevExpress.Data.v15.2.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\de\DevExpress.Utils.v15.2.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\es\DevExpress.Utils.v15.2.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\ja\DevExpress.Utils.v15.2.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\ru\DevExpress.Utils.v15.2.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\de\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\es\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\ja\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\ru\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\de\DevExpress.XtraEditors.v15.2.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\es\DevExpress.XtraEditors.v15.2.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\ja\DevExpress.XtraEditors.v15.2.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\ru\DevExpress.XtraEditors.v15.2.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\de\DevExpress.Printing.v15.2.Core.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\es\DevExpress.Printing.v15.2.Core.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\ja\DevExpress.Printing.v15.2.Core.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\bin\Debug\ru\DevExpress.Printing.v15.2.Core.resources.dll
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\obj\Debug\Creating User.csprojResolveAssemblyReference.cache
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\obj\Debug\Creating_User.Form_CreatingUser.resources
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\obj\Debug\Creating_User.Properties.Resources.resources
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\obj\Debug\Creating User.csproj.GenerateResource.Cache
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\obj\Debug\Creating User.exe
+C:\Users\Dung\Documents\Visual Studio 2015\Projects\Test DotNetBar_2\Creating User\obj\Debug\Creating User.pdb
