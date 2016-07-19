@@ -378,7 +378,7 @@
             this.labelX12.Size = new System.Drawing.Size(52, 23);
             this.labelX12.TabIndex = 22;
             this.labelX12.Text = "hadung";
-            this.labelX12.Click += new System.EventHandler(this.labelX12_Click);
+            //this.labelX12.Click += new System.EventHandler(this.labelX12_Click);
             // 
             // labelX13
             // 

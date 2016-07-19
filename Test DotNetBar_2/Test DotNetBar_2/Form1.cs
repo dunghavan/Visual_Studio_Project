@@ -21,10 +21,5 @@ namespace Test_DotNetBar_2
         {
 
         }
-
-        private void labelX12_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
